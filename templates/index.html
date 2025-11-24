@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agentic Company Researcher - Generate professional company reports using AI">
+    <title>Agentic Company Researcher</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container-main">
+        <!-- Header -->
+        <header class="header-main">
+            <div class="header-content">
+                <h1 class="logo">Agentic Company Researcher</h1>
+                <p class="tagline">AI-Powered Professional Company Research Reports</p>
+            </div>
+            <div class="header-links">
+                <a href="https://github.com/ahmdeltoky03/company-report-generator" target="_blank" class="link-icon" title="Visit GitHub">
+                    GitHub
+                </a>
+                <a href="https://tavily.com" target="_blank" class="link-icon" title="Visit Tavily">
+                    Tavily
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- API Configuration Section -->
+            <section class="card api-config-card">
+                <div class="card-header">
+                    <h2>API Configuration</h2>
+                    <p>Secure API credentials setup</p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <div class="label-group">
+                            <label for="cohere-key">Cohere API Key</label>
+                            <a href="https://dashboard.cohere.com/api-keys" target="_blank" class="get-key-link">Get Key</a>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" id="cohere-key" placeholder="Enter your Cohere API key" class="input-text">
+                            <button class="toggle-visibility" data-target="cohere-key" type="button" title="Show/Hide">View</button>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-group">
+                            <label for="tavily-key">Tavily API Key</label>
+                            <a href="https://app.tavily.com" target="_blank" class="get-key-link">Get Key</a>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" id="tavily-key" placeholder="Enter your Tavily API key" class="input-text">
+                            <button class="toggle-visibility" data-target="tavily-key" type="button" title="Show/Hide">View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="set-keys-btn" class="btn-action btn-primary">Configure API Keys</button>
+                <div id="keys-message" class="message-box hidden"></div>
+            </section>
+
+            <!-- Research Agent Section -->
+            <section class="card main-research-card">
+                <div class="card-header">
+                    <h2>Company Research Agent</h2>
+                    <p>Generate comprehensive company reports powered by Tavily search</p>
+                </div>
+
+                <form class="research-form" id="research-form">
+                    <div class="form-row-2">
+                        <div class="form-field">
+                            <label for="company-name">Company Name <span class="required">*</span></label>
+                            <div class="input-group">
+                                <input type="text" id="company-name" placeholder="e.g., Apple, Microsoft, Google" class="input-text" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="company-link">Company URL</label>
+                            <div class="input-group">
+                                <input type="url" id="company-link" placeholder="e.g., apple.com" class="input-text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="generate-btn" class="btn-search">
+                        Start Research
+                    </button>
+                </form>
+
+                <!-- Loading State -->
+                <div id="loading" class="loading-spinner hidden">
+                    <div class="spinner"></div>
+                    <p>Generating comprehensive report...</p>
+                    <p class="loading-subtitle">This may take a moment</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="error-message" class="message-box error hidden"></div>
+            </section>
+
+            <!-- Report Display Section -->
+            <section id="report-section" class="card report-card hidden">
+                <div class="report-header">
+                    <div class="report-title-group">
+                        <h2 id="report-title">Research Report</h2>
+                        <span class="report-badge">Completed</span>
+                    </div>
+                </div>
+                <div id="report-content" class="report-display"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-main">
+            <p>Copyright © 2025 — Developed by <strong>Ahmed Eltokhy</strong>. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
