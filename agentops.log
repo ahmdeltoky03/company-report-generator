@@ -1,0 +1,7 @@
+2025-11-24 07:06:34,434 - INFO - Session Replay for default trace: https://app.agentops.ai/sessions?trace_id=f5ddc38ba60f7ed19800f6f12aaf7150
+2025-11-24 07:06:48,994 - ERROR - [agentops.InternalSpanProcessor] Error uploading logfile: Upload failed: 401
+2025-11-24 07:07:19,940 - WARNING - end_session() is deprecated and will be removed in v4 in the future. Use agentops.end_trace() instead.
+2025-11-24 07:07:20,499 - INFO - Session Replay for default.session trace: https://app.agentops.ai/sessions?trace_id=f5ddc38ba60f7ed19800f6f12aaf7150
+2025-11-24 07:16:24,110 - INFO - Session Replay for default.session trace: https://app.agentops.ai/sessions?trace_id=f5ddc38ba60f7ed19800f6f12aaf7150
+2025-11-24 07:19:44,442 - INFO - Session Replay for default.session trace: https://app.agentops.ai/sessions?trace_id=f5ddc38ba60f7ed19800f6f12aaf7150
+2025-11-24 07:22:21,846 - INFO - Session Replay for default.session trace: https://app.agentops.ai/sessions?trace_id=f5ddc38ba60f7ed19800f6f12aaf7150
